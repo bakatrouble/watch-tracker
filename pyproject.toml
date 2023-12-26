@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "watch-tracker"
+version = "0.1.0"
+description = ""
+authors = ["bakatrouble <bakatrouble@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+uvicorn = {extras = ["standard"], version = "^0.24.0.post1"}
+sanic = "^23.6.0"
+beanie = "^1.23.6"
+hug = "^2.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
