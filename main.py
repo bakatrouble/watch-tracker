@@ -9,7 +9,9 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, ConfigDict
 from starlette.middleware.cors import CORSMiddleware
 
-mongo = AsyncIOMotorClient('mongodb://localhost:27017/watch_tracker')
+import config
+
+mongo = AsyncIOMotorClient(config.MONGODB_URL)
 
 
 @asynccontextmanager
