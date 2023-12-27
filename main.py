@@ -16,7 +16,7 @@ mongo = AsyncIOMotorClient(config.MONGODB_URL)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await init_beanie(database=mongo.db_name, document_models=[Entry])
+    await init_beanie(database=mongo.watch_tracker, document_models=[Entry])
     yield
     mongo.close()
 
